@@ -23,28 +23,19 @@
     <?php
     ?>
     <form method="POST">
-        Masukkan Jari-jari : <input type="number" name="r">
-        <input type="submit" value="Hitung" name='hitung1'>
+        Masukkan Jari-jari Lingkaran : <input type="number" name="r"></br>
+        Masukkan Panjang Persegi : <input type="number" name="p"></br>
+        Masukkan Lebar Persegi : <input type="number" name="l"></br>
+        <input type="submit" value="Hitung">
     </form>   
     <?php
-    // $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["r"])
-    $jari_jari=0;
-    if (isset($_POST["hitung1"])) {
+    if (isset($_POST["r"])) {
         $jari_jari = $_POST["r"];
     }
     echo "Luas Lingkaran = " . lingkaran($jari_jari);
     ?>
-
-    <form method="POST">
-        Masukkan Panjang Persegi : <input type="number" name="p"></br>
-        Masukkan Lebar Persegi : <input type="number" name="l">
-        <input type="submit" value="Hitung" name='hitung2'></br>
-    </form>   
     <?php
-    $p=0;
-    $l=0;
-    // $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["p"]) && isset($_POST["l"])
-    if (isset($_POST["hitung2"])) {
+    if (isset($_POST["p"]) && isset($_POST["l"])) {
         $p = $_POST["p"];
         $l = $_POST["l"];
     }
