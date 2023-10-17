@@ -1,10 +1,10 @@
 <h4>Tambah Data Mahasiswa</h4>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-<form action="proses_mahasiswa.php?aksi=tambah" method="post">
+<form action="proses_dosen.php?aksi=tambah" method="post">
     <table>
         <tr>
-            <td>NIM</td>
-            <td><input type="text" name="nim"></td>
+            <td>NIP</td>
+            <td><input type="text" name="nip"></td>
         </tr>
 
         <tr>
