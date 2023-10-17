@@ -26,7 +26,7 @@ foreach($db->tampil_mahasiswa() as $x){
     <td><?php echo $x['alamat']?></td>
     <td>
         <a href="edit_mahasiswa.php?id=<?php echo $x['id'];?>&aksi=edit">Edit</a>
-        <a href="hapus_mahasiswa.php">Hapus</a>
+        <a href="proses_mahasiswa.php?id=<?php echo $x['id'];?>&aksi=hapus">Hapus</a>
     </td>
 </tr>
 <?php

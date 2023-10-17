@@ -12,4 +12,8 @@ else if($aksi=="update"){
     header("location:tampil_mahasiswa.php");
 
 }
+elseif ($aksi=="hapus"){
+    $db->hapus($_GET['id']);
+    header("location:tampil_mahasiswa.php");
+}
 ?>
