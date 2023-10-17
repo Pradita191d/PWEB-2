@@ -6,7 +6,8 @@ $db = new database();
 ?>
 
 <h3>Data Mahasiswa</h3>
-<a href="input_mahasiswa.php">Tambah Mahasiswa </br></br></a>
+<link href="../public/assets/css/sb-admin-2.min.css" rel="stylesheet" />
+<a class="btn btn-success mb-4" href="input_mahasiswa.php">Tambah Mahasiswa </br></br></a>
 <table border="1">
 <tr>
     <th>No</th>
@@ -25,8 +26,8 @@ foreach($db->tampil_mahasiswa() as $x){
     <td><?php echo $x['nama']?></td>
     <td><?php echo $x['alamat']?></td>
     <td>
-        <a href="edit_mahasiswa.php?id=<?php echo $x['id'];?>&aksi=edit">Edit</a>
-        <a href="proses_mahasiswa.php?id=<?php echo $x['id'];?>&aksi=hapus">Hapus</a>
+        <a class="btn btn-warning mb-4"href="edit_mahasiswa.php?id=<?php echo $x['id'];?>&aksi=edit">Edit</a>
+        <a class="btn btn-danger mb-4"href="proses_mahasiswa.php?id=<?php echo $x['id'];?>&aksi=hapus">Hapus</a>
     </td>
 </tr>
 <?php
