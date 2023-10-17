@@ -14,8 +14,6 @@ class manusia
         $this->nama_saya = $saya;
     }
 
-    
-
     public function getTTL()
     {
         return $this->ttl;
