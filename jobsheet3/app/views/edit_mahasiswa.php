@@ -6,9 +6,7 @@ $db = new database();
 <h3>Edit Data Mahasiswa</h3>
 <form action="update.php?aksi=update" method="post">
 <?php
-foreach($db->edit($_GET['id']) as $d){
-    
-}
+foreach($db->edit($_GET['id']) as $x){
 ?>
     <table>
         <tr>
@@ -32,4 +30,7 @@ foreach($db->edit($_GET['id']) as $d){
             <td><input type="submit" value="Simpan"></td>
         </tr>
     </table>
+<?php
+}
+?>
 </form>

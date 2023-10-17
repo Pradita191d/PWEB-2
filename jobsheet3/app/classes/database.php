@@ -28,6 +28,10 @@ class database
 
     function edit($id){
         $data = mysqli_query($this->koneksi, "select * from mahasiswa where id='$id'");
+        while($d = mysqli_fetch_array($data)){
+            $this->hasil[] = $d;
+        }
+        return $this->hasil;
     }
 }
 ?>
