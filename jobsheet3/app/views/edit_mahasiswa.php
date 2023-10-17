@@ -4,25 +4,28 @@ $db = new database();
 ?>
 
 <h3>Edit Data Mahasiswa</h3>
-<form action="update.php?aksi=update" method="post">
+<form action="proses_mahasiswa.php?aksi=update" method="post">
 <?php
-foreach($db->edit($_GET['id']) as $x){
+foreach($db->edit($_GET['id']) as $d){
 ?>
     <table>
         <tr>
             <td>NIM</td>
-            <td><input type="text" name="nim"></td>
+            <td>
+                <input type="hidden" name="id" value="<?php echo $d['id']?>">
+                <input type="text" name="nim" value="<?php echo $d['nim']?>">
+            </td>
         </tr>
 
         <tr>
             <td>Nama</td>
-            <td><input type="text" name="nama"></td>
+            <td><input type="text" name="nama" value="<?php echo $d['nama']?>"></td>
         </tr>
 
         <tr>
             <td>Alamat</td>
             <td>
-                <textarea name="alamat" cols="30" rows="10"></textarea>
+                <textarea name="alamat" cols="30" rows="10"><?php echo $d['alamat']?>"</textarea>
             </td>
         </tr>
         <tr>
