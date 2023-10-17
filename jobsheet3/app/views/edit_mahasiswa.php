@@ -3,6 +3,7 @@ include '../classes/database.php';
 $db = new database();
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<div class="px-3 py-3" >
 <h4>Edit Data Mahasiswa</h4>
 <form action="proses_mahasiswa.php?aksi=update" method="post">
 <?php
@@ -30,10 +31,11 @@ foreach($db->edit($_GET['id']) as $d){
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Simpan"></td>
+            <td><input class="btn btn-primary btn-sm" type="submit" value="Simpan"></td>
         </tr>
     </table>
 <?php
 }
 ?>
 </form>
+</div>

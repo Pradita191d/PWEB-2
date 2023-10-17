@@ -50,8 +50,8 @@ class database
         return $this->hasil;
     }
 
-    function tambah_dos($nim, $nama, $alamat){
-        mysqli_query($this->koneksi, "insert into dosen (nip, nama, alamat) values ('$nim', '$nama', '$alamat')");
+    function tambah_dos($nip, $nama, $alamat){
+        mysqli_query($this->koneksi, "insert into dosen (nip, nama, alamat) values ('$nip', '$nama', '$alamat')");
 
     }
 
