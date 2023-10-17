@@ -35,7 +35,7 @@ $db = new database();
 <h4>Data Dosen</h4>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 <div class="mb-3">
-    <a class="btn btn-success btn-sm md-4" href="input_dosen.php">Tambah Dosen</a>
+    <a class="btn btn-primary btn-sm md-4" href="input_dosen.php">Tambah Dosen</a>
 </div>
 <table border="1" class="table table-bordered">
 <tr>

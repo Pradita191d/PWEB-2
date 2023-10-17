@@ -9,31 +9,20 @@ $db = new database();
 <?php
 foreach($db->edit($_GET['id']) as $d){
 ?>
-    <table>
-        <tr>
-            <td>NIM</td>
-            <td>
-                <input type="hidden" name="id" value="<?php echo $d['id']?>">
-                <input type="text" name="nim" value="<?php echo $d['nim']?>">
-            </td>
-        </tr>
-
-        <tr>
-            <td>Nama</td>
-            <td><input type="text" name="nama" value="<?php echo $d['nama']?>"></td>
-        </tr>
-
-        <tr>
-            <td>Alamat</td>
-            <td>
-                <textarea name="alamat" cols="30" rows="5"><?php echo $d['alamat']?></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input class="btn btn-primary btn-sm" type="submit" value="Simpan"></td>
-        </tr>
-    </table>
+<div class="mb-3">
+    <label for="nim" class="form-label">NIM</label>
+    <input type="hidden" class="form-control col-6" name="id" value="<?php echo $d['id']?>">
+    <input type="text" class="form-control col-6" name="nim" value="<?php echo $d['nim']?>">
+  </div>
+  <div class="mb-3">
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text"  class="form-control col-6" name="nama" value="<?php echo $d['nama']?>">
+  </div>
+  <div class="mb-3">
+    <label for="alamat" class="form-label">Alamat</label>
+    <input type="text"  class="form-control col-6" name="alamat" value="<?php echo $d['alamat']?>">
+  </div>
+  <input  class="btn btn-primary btn-sm" type="submit" value="Simpan">
 <?php
 }
 ?>
