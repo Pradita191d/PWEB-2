@@ -18,23 +18,23 @@
     }
 
     echo "Di bawah ini adalah bilangan prima kurang dari 20 menggunakan perulangan DO WHILE <br>";
-    $bil = 2;
+    $y = 2;
     do {
         $bilPrima = true;
         // untuk memeriksa bilangan prima
-        for ($z = 2; $z < $bil; $z++) {
-            if ($bil % $z == 0) {
+        for ($z = 2; $z < $y; $z++) {
+            if ($y % $z == 0) {
                 $bilPrima = false;
                 break;
             }
         }
 
         if ($bilPrima) {
-            echo $bil . "<br>";
+            echo $y . "<br>";
         }
 
-        $bil++;
-    } while ($bil < 20);
+        $y++;
+    } while ($y < 20);
     ?>
 </body>
 </html>

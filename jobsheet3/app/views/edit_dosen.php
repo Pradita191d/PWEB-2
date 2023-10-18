@@ -7,7 +7,6 @@ $db = new database();
   <div class="px-3 py-3" >
     <h4>Edit Data Dosen</h4>
 </head>
-
 <form action="proses_dosen.php?aksi=update" method="post">
 <?php
 foreach($db->edit_dos($_GET['id']) as $i){
@@ -30,4 +29,3 @@ foreach($db->edit_dos($_GET['id']) as $i){
 }
 ?>
 </form>
-</div>
