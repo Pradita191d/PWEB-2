@@ -17,10 +17,10 @@ $db = new database();
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mahasiswa</a>
+          <a class="nav-link" href="tampil_mahasiswa.php">Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dosen</a>
+          <a class="nav-link" href="tampil_dosen.php">Dosen</a>
         </li>
         
       </ul>
@@ -37,6 +37,28 @@ $db = new database();
 <div class="mb-3">
     <a class="btn btn-primary btn-sm md-4" href="input_dosen.php">Tambah Dosen</a>
 </div>
+
+<?php
+if (isset($_GET['success'])) {
+  if ($_GET['success'] === "tambah") {
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  Data dosen berhasil ditambahkan!
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+  } elseif ($_GET['success'] === "update") {
+    echo '<div class="alert alert-success  alert-dismissible fade show" role="alert">
+  Data dosen berhasil diubah!
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+  } elseif ($_GET['success'] === "hapus") {
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  Data dosen berhasil dihapus!
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+  }
+}
+?>
+
 <table border="1" class="table table-bordered">
 <tr>
     <th>No</th>
@@ -64,3 +86,4 @@ foreach($db->tampil_dosen() as $p){
 ?>
 </table>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
