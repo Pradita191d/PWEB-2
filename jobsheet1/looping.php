@@ -25,7 +25,6 @@
         for ($z = 2; $z < $y; $z++) {
             if ($y % $z == 0) {
                 $bilPrima = false;
-                break;
             }
         }
 
