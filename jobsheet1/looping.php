@@ -8,8 +8,9 @@
 <body>
     <?php
     echo "Di bawah ini adalah bilangan genap dari 1 hingga 10 menggunakan perulangan FOR <br>";
-    for ($x = 2; $x <= 10; $x += 2)
+    for ($x = 2; $x <= 10; $x += 2){
         echo "$x <br>";
+    }
     echo "Di bawah ini adalah bilangan ganjil dari 1 hingga 10 menggunakan perulangan WHILE <br>";
     $y = 1;
     while($y <= 10 ){
@@ -25,6 +26,7 @@
         for ($z = 2; $z < $y; $z++) {
             if ($y % $z == 0) {
                 $bilPrima = false;
+                break;
             }
         }
 
