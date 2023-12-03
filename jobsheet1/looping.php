@@ -22,7 +22,7 @@
     $y = 2;
     do {
         $bilPrima = true;
-        // untuk memeriksa bilangan prima
+        // untuk memeriksa bilangan prima atau bukan
         for ($z = 2; $z < $y; $z++) {
             if ($y % $z == 0) {
                 $bilPrima = false;

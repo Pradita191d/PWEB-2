@@ -17,6 +17,7 @@ class mahasiswa{
         return "Alamatku di Jalan Malabar, Cilacap Tengah <br><br>";
     }
 }
+
 //membuat object dari kelas mahasiswa
 $nama_mahasiswa = new mahasiswa();
 
